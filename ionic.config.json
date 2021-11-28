@@ -1,0 +1,7 @@
+{
+  "name": "grillo-noticias",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

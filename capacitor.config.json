@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "grillo-noticias",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
