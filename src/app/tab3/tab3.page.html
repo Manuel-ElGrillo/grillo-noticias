@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Noticias Globales
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let global of noticiasGlobales; let i = index" 
+                size="12" size-lg="3" size-md="4" sizeSm="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <span class="text-primary">{{ i + 1 }}.</span>
+              <span class="source-name">{{global.source.name}}</span>  
+            </ion-card-subtitle>
+            <ion-card-title>{{global.title}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-img [src]="global.urlToImage" 
+                  *ngIf="global.urlToImage">
+          </ion-img>
+
+          <ion-card-content>
+            <p>{{global.description}}</p>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
